@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/dbHelper/mongodb.dart';
 import 'package:my_project/pages/homePage.dart';
-
+import 'package:get/get.dart';
+import 'package:my_project/screens/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,13 +10,12 @@ void main() async {
   runApp(StartPoint());
 }
 class StartPoint extends StatelessWidget {
-  const StartPoint({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: HomeScreen(),
     );
   }
 }
