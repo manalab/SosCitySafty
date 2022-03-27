@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:my_project/dbHelper/mongodb.dart';
 import 'package:my_project/pages/homePage.dart';
 
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await MongoDatabase.connect();
   runApp(StartPoint());
 }
 class StartPoint extends StatelessWidget {
