@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:SosCitySafty/pages/homepage.dart';
+import 'package:my_project/pages/homePage.dart';
+
 
 void main() {
   runApp(StartPoint());
 }
-
 class StartPoint extends StatelessWidget {
-  // This widget is the root of your application.
+  const StartPoint({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
