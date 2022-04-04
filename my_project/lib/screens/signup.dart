@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:blog_post_app/NetworkHandler.dart';
-import 'package:blog_post_app/screens/homePage.dart';
-import 'package:blog_post_app/screens/login.dart';
+import 'package:my_project/NetworkHandler.dart';
+import 'package:my_project/screens/homePage.dart';
+import 'package:my_project/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import '../constants/constants.dart';

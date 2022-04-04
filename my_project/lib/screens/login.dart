@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:blog_post_app/NetworkHandler.dart';
-import 'package:blog_post_app/screens/homePage.dart';
-import 'package:blog_post_app/screens/signup.dart';
+import 'package:my_project/NetworkHandler.dart';
+import 'package:my_project/screens/homePage.dart';
+import 'package:my_project/screens/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:blog_post_app/constants/constants.dart';
+import 'package:my_project/constants/constants.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class LoginPage extends StatefulWidget {

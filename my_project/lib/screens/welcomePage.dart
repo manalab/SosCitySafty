@@ -1,9 +1,10 @@
 // import 'dart:html';
 
-import 'package:blog_post_app/screens/login.dart';
-import 'package:blog_post_app/screens/signup.dart';
+
+import 'package:my_project/screens/signup.dart';
 import 'package:flutter/material.dart';
 import '../constants/constants.dart';
+import 'package:my_project/screens/login.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
