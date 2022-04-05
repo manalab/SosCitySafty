@@ -1,11 +1,47 @@
-import 'package:mongo_dart/mongo_dart.dart';
+import 'package:blog_post_app/screens/homePage.dart';
+import 'package:blog_post_app/screens/stateScreens/createprofile.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'screens/welcomePage.dart';
 
-import 'package:my_project/server.dart' as server;
+void main() {
+  runApp(MyApp());
+}
 
-void main(List<String> arguments)async{
-  final db= await Db.create('mongodb+srv://<username>:<password>@cluster0.gehvy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
-  await db.open();
-  final call = db.collection('users');
-  print(await coll.fond());
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
+  Widget currentPage = WelcomePage();
+  final storage = new FlutterSecureStorage();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    checklogin();
+  }
+
+  void checklogin() async {
+    String? token = await storage.read(key: "token");
+    if (token != null) {
+      setState(() {
+        currentPage = HomePage();
+      });
+    } else {
+      setState(() {
+        currentPage = WelcomePage();
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: WelcomePage(),
+    );
+  }
 }
